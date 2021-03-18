@@ -17,7 +17,7 @@ let text = `If you deposit <mark>$${principal}</mark>
 
    // Validate amount is > 0
    function validatePrincipal() { 
-    if (document.getElementById("principal").value == '' || document.getElementById("principal").value <= 0){
+    if (principal == '' || principal <= 0){
         alert('Please enter a positive number');
 }}
 validatePrincipal()
