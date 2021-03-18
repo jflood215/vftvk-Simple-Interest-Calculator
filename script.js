@@ -14,28 +14,17 @@ let text = `If you deposit <mark>$${principal}</mark>
     in the year <mark>${futureYear}.</mark>`;
 
    document.getElementById('result').innerHTML = text;
-}
+
+   // Validate amount is > 0
+   function validatePrincipal() { 
+    if (document.getElementById("principal").value == '' || document.getElementById("principal").value <= 0){
+        alert('Please enter a positive number');
+}}
+validatePrincipal()
+};
 
 // Display value of slider
 function rangeSlider() {
     let displayRate = document.getElementById("rate").value;
    document.getElementById("displayRate").innerHTML = `${displayRate}%`;
 };
-
-rangeSlider();
-
-// Validate that principal is a valid and positive number
-function principalValidation() {
-    if (document.getElementById("principal").value == ""){
-     alert("Please enter an ammount.");
-     document.getElementById("principal").focus();
-     return false;
- } else if (parseInt(document.getElementById("principal").value) <= 0) {
-     alert("Please fill out the ammount field with a number higher than zero.");
-     document.getElementById("principal").focus();
-     return false;
- } else
- return true;
-    }
-
-principalValidation()
