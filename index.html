@@ -10,7 +10,7 @@
         <div class="maindiv">
         <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number" id="principal" required>  <br/>
+        Amount <input type="number" id="principal" name="principal" pattern="[0-9]" required>  <br/>
         Rate <input type="range" id="rate" name="rate" min="1" max="20" step="0.25" value="10.25" onchange="rangeSlider()"> 
         <span id="displayRate">10.25%</span> <br/>
         No. of Years <select name="years" id="years">
@@ -34,7 +34,7 @@
     <br>
     <br>
     <footer class="footer">
-        Everyone Gets Rich &copy;
+         Created in 2021 by John Flood
     </footer>
     </body>
 </html>
