@@ -6,8 +6,6 @@ let rate = document.getElementById("rate").value;
 let years = document.getElementById("years").value;
 let futureYear = new Date().getFullYear() + parseInt(years);
 
-// let interest = principal * years * rate / 100;
-
 let interest = principal * (1 + rate / 100) ** years - principal
     
 let text = `If you deposit <mark>$${principal}</mark> 
